@@ -19,3 +19,8 @@ if [ ! -d "$dir" ]; then
 fi
 
 echo "$writecontent" > "$writefile"
+
+if[$? -ne 0 ]; then
+    echo "Error: Failed to write to file: $writefile"
+    exit 1
+fi
